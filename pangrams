@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        String str = s.toLowerCase();
+        //System.out.println(s);
+        //System.out.println(str);
+        int n = str.length();
+        int total =0;
+        CharSequence cs;
+
+        for(int i=97; i<=122; i++){
+            cs = Character.toString((char)i);
+            //System.out.println("Caracter: "+cs);
+            if(str.contains(cs)) total++;
+            //System.out.println(total);
+        }
+        if(total==26){
+            System.out.println("pangram");
+        }
+        else{
+            System.out.println("not pangram");
+        }
+    }
+    }
